@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tyler Rolfe</title>
+<title>Tyler Rolfe – Blog</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -45,15 +45,11 @@
     text-decoration: none;
   }
 
-  /* ---------- Page frame ---------- */
-
   .page {
     width: 100%;
     max-width: 640px;
     padding: 4.5rem 1.75rem 3rem;
   }
-
-  /* ---------- Tabs (the signature element) ---------- */
 
   .tabset {
     display: flex;
@@ -106,23 +102,11 @@
     z-index: 1;
   }
 
-  /* ---------- Document body ---------- */
-
   .sheet {
     border: 1px solid var(--hairline);
     border-top: none;
     background: var(--paper);
     padding: 3rem 2.5rem 3.25rem;
-  }
-
-  .eyebrow {
-    font-family: var(--font-utility);
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 0.9rem;
   }
 
   h1 {
@@ -138,22 +122,9 @@
     width: 48px;
     height: 2px;
     background: var(--accent);
-    margin: 0 0 1.6rem;
+    margin: 0 0 1.8rem;
     border: none;
   }
-
-  .bio {
-    font-size: 1.08rem;
-    color: var(--ink-soft);
-    max-width: 34rem;
-  }
-
-  .bio em {
-    font-style: italic;
-    color: var(--ink);
-  }
-
-  /* ---------- Post / paper cards (Blog & Papers pages) ---------- */
 
   .post-list {
     display: flex;
@@ -197,18 +168,6 @@
     margin: 0;
   }
 
-  .post-card--placeholder {
-    border-style: dashed;
-    cursor: default;
-  }
-
-  .post-card--placeholder .post-title {
-    font-style: italic;
-    color: var(--muted);
-  }
-
-  /* ---------- Footer ---------- */
-
   footer {
     font-family: var(--font-utility);
     font-size: 0.7rem;
@@ -234,25 +193,25 @@
 
   <main class="page">
 
-    <!-- ===== Tabs ===== -->
     <nav class="tabset">
-      <a class="tab is-active" href="index.html" aria-current="page">Home</a>
-      <a class="tab" href="blog.html">Blog</a>
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab is-active" href="blog.html" aria-current="page">Blog</a>
       <a class="tab" href="papers.html">Papers</a>
-      <!-- EDIT: change "cv.pdf" to match the filename you upload to the repo -->
       <a class="tab" href="cv.pdf" target="_blank" rel="noopener">CV<span class="arrow">&#8599;</span></a>
     </nav>
     <div class="baseline"></div>
 
     <article class="sheet">
-
-      <h1>Tyler Rolfe</h1>
-
+      <h1>Blog</h1>
       <hr class="rule">
 
-      <p class="bio">
-        Machine learning researcher with interests in probabilistic modelling, generative AI, and scientific machine learning.
-      </p>
+      <!-- EDIT: add a new <a class="post-card"> block for each new post -->
+      <div class="post-list">
+        <a class="post-card" href="https://hub.mlis.uk/projects/rare-trajectory-rl" target="_blank" rel="noopener">
+          <p class="post-title">Reinforcement Learning for Rare Trajectory Sampling</p>
+          <p class="post-meta">Knowledge Hub<span class="arrow">&#8599;</span></p>
+        </a>
+      </div>
     </article>
 
     <footer>&copy; 2026 Tyler Rolfe</footer>
